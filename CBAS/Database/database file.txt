@@ -1,0 +1,15 @@
+CREATE TABLE courseInfo
+  (
+	dept_id varchar(50)not null,
+	dept_name varchar(100)not null,
+	course_name varchar(100)not null,
+	no_of_sem int not null,
+	constraint foreign key(dept_id) references deptInfo(dept_id)
+  );
+  
+   INSERT INTO courseInfo VALUES ('D1','Electronics','Analog','4');
+   INSERT INTO courseInfo VALUES ('D1','Electronics','Digital','4');
+   INSERT INTO courseInfo VALUES ('D2','Computer Science','MCS','4');
+   INSERT INTO courseInfo VALUES ('D2','Computer Science','MCA','6');
+
+   SELECT * FROM courseInfo;
